@@ -79,34 +79,23 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+fixtures = ["Web Form",'Custom Field','Property Setter']
+
+doc_events = {
+	"Sales Invoice": {
+		"on_submit": "gymnasium_management.gymnasium_management.doctype.membership_package_details.membership_package_details.create_membership_package_details",
+		"on_cancel": "gymnasium_management.gymnasium_management.doctype.membership_package_details.membership_package_details.cancel_si_membership_package_details"
+	},
+}
 
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"gymnasium_management.tasks.all"
-# 	],
-# 	"daily": [
-# 		"gymnasium_management.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"gymnasium_management.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"gymnasium_management.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"gymnasium_management.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+	"daily": [
+		"gymnasium_management.gymnasium_management.doctype.membership_package_details.membership_package_details.create_package_log"
+	]
+}
 
 # Testing
 # -------
