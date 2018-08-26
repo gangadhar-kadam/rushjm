@@ -2263,7 +2263,7 @@
   "in_standard_filter": 0, 
   "insert_after": "tolerance", 
   "label": "Quantity", 
-  "modified": "2018-08-12 17:47:52.289247", 
+  "modified": "2018-08-26 09:44:19.733554", 
   "name": "Item-quantity", 
   "no_copy": 0, 
   "options": null, 
