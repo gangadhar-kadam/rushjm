@@ -4,12 +4,12 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"label": _("Billing"),
+			"label": _("Gymnasium"),
 			"items": [
 				{
 					"type": "doctype",
-					"name": "Measurements",
-					"description": _("Measurements.")
+					"name": "Customer Assesment",
+					"description": _("Customer Assesment.")
 				},
 				{
 					"type": "doctype",
@@ -25,6 +25,26 @@ def get_data():
 					"type": "doctype",
 					"name": "Package Log",
 					"description": _("Package Log")
+				},
+			]
+		},
+		{
+			"label": _("Setup"),
+			"items": [
+				{
+					"type": "doctype",
+					"name": "Measurements",
+					"description": _("Measurements.")
+				},
+				{
+					"type": "doctype",
+					"name": "Exercise Master",
+					"description": _("Exercise Master.")
+				},
+				{
+					"type": "doctype",
+					"name": "Diet Master",
+					"description": _("Diet Master.")
 				},
 				{
 					"type": "doctype",
